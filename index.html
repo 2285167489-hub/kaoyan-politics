@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考研政治每日知识点推送 - 2026年7月28日</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --card-bg: #16213e;
+    --accent: #e94560;
+    --gold: #f0c060;
+    --text: #e0e0e0;
+    --text-secondary: #a0a0b0;
+    --border: #2a2a4a;
+    --tag-bg: #0f3460;
+    --green: #4caf84;
+    --blue: #5b9bd5;
+    --purple: #9b7fd4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 28px;
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .header .meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+  .header .meta span { display: flex; align-items: center; gap: 6px; }
+  .countdown {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  /* Section */
+  .section {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+  }
+  .section h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section h3 {
+    font-size: 16px;
+    color: var(--blue);
+    margin: 16px 0 10px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th {
+    background: rgba(233, 69, 96, 0.15);
+    color: var(--accent);
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px;
+  }
+  .tag-intl { background: rgba(91,155,213,0.2); color: var(--blue); }
+  .tag-cn { background: rgba(233,69,96,0.15); color: var(--accent); }
+  .tag-marx { background: rgba(155,127,212,0.2); color: var(--purple); }
+  .tag-maoz { background: rgba(240,192,96,0.2); color: var(--gold); }
+
+  /* Key points */
+  .key-point {
+    background: rgba(240,192,96,0.08);
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+
+  /* Code block */
+  pre {
+    background: rgba(0,0,0,0.3);
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    color: var(--green);
+  }
+
+  /* Quiz */
+  .quiz-card {
+    background: rgba(15,52,96,0.4);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    border: 1px solid var(--border);
+  }
+  .quiz-card .q-type {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .quiz-card .question {
+    font-size: 15px;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .option {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .option:hover { background: rgba(255,255,255,0.06); }
+  .answer-toggle {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .answer-toggle:hover { opacity: 0.85; }
+  .answer-content {
+    display: none;
+    margin-top: 14px;
+    padding: 14px;
+    background: rgba(76,175,132,0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(76,175,132,0.2);
+  }
+  .answer-content.show { display: block; }
+  .answer-content .correct { color: var(--green); font-weight: 700; font-size: 15px; }
+  .answer-content .explanation { color: var(--text-secondary); margin-top: 8px; font-size: 14px; }
+
+  /* Mnemonic */
+  .mnemonic-box {
+    background: linear-gradient(135deg, rgba(155,127,212,0.1), rgba(91,155,213,0.1));
+    border: 1px solid rgba(155,127,212,0.3);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 12px 0;
+  }
+  .mnemonic-box p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--purple);
+    margin: 8px 0;
+  }
+
+  /* Study plan */
+  .plan-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .plan-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  .plan-list .time-badge {
+    background: var(--tag-bg);
+    color: var(--blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .footer .quote {
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  /* Divider */
+  hr { border: none; border-top: 1px solid var(--border); margin: 8px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>📚 考研政治每日知识点推送</h1>
+    <div class="meta">
+      <span>📅 2026年7月28日（周二）</span>
+      <span>🎯 时政热点 + 马原·唯物辩证法</span>
+    </div>
+    <div class="countdown">📌 距2027考研初试约150天</div>
+  </div>
+
+  <!-- Section 1: 时政热点 -->
+  <div class="section">
+    <h2>🔥 今日时政热点（7月27日—28日）</h2>
+
+    <h3>🌍 国际</h3>
+    <table>
+      <thead>
+        <tr><th style="width:36px">#</th><th>热点事件</th><th>考点关联</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>美伊冲突暂缓</strong>：持续近两周的美军对伊朗空袭已暂停，多方推进外交斡旋；内塔尼亚胡下周将赴华盛顿会见特朗普</td>
+          <td><span class="tag tag-intl">大国关系</span> <span class="tag tag-intl">中东局势</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>朝鲜抨击日本拥核言论</strong>：朝中社发文抨击日本防卫大臣小泉进次郎"有必要讨论核武"言论</td>
+          <td><span class="tag tag-intl">核不扩散</span> <span class="tag tag-intl">二战历史</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>俄乌冲突</strong>：克宫回应托卡耶夫"冻结冲突"提议，称鉴于基辅立场不可能冻结</td>
+          <td><span class="tag tag-intl">大国博弈</span> <span class="tag tag-intl">和平争端</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>巴西拒签美国高官</strong>：怀疑其借访问干涉10月总统选举</td>
+          <td><span class="tag tag-intl">主权原则</span> <span class="tag tag-intl">不干涉内政</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>🇨🇳 国内</h3>
+    <table>
+      <thead>
+        <tr><th style="width:36px">#</th><th>热点事件</th><th>考点关联</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>台风"红霞"应对</strong>：国家防减救委办向广东、江西、湖南调拨2.5万件中央救灾物资</td>
+          <td><span class="tag tag-cn">以人民为中心</span> <span class="tag tag-cn">国家治理</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>蜂群无人机首次观测台风</strong>：国内首次用蜂群无人机对台风登陆全过程开展多维度观测</td>
+          <td><span class="tag tag-cn">科技自立自强</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>曙光8000（登峰）落成</strong>：中国首个全国产、全球唯一的单体十万卡AI超集群</td>
+          <td><span class="tag tag-cn">新质生产力</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>生态环境部</strong>：上半年全国空气质量稳中向好，地表水环境质量总体稳定</td>
+          <td><span class="tag tag-cn">生态文明</span></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><strong>油价大涨预警</strong>：原油变化率14.64%，预计汽柴油大涨0.59—0.70元/升</td>
+          <td><span class="tag tag-marx">宏观调控</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 2: 核心考点 -->
+  <div class="section">
+    <h2>📖 核心考点精讲：马原 — 唯物辩证法</h2>
+    <p style="color:var(--text-secondary);font-size:14px;margin-bottom:16px;">
+      今日聚焦 <strong style="color:var(--accent);">对立统一规律（矛盾规律）</strong>——选择题和分析题的绝对重点！
+    </p>
+
+    <h3>🧩 知识框架速览</h3>
+    <pre>
+唯物辩证法
+├── 两大总特征：普遍联系 + 永恒发展
+├── 三大规律
+│   ├── ★ 对立统一规律（矛盾规律）— 核心
+│   ├── 量变质变规律
+│   └── 否定之否定规律
+├── 五对范畴：原因与结果、必然与偶然、可能与现实、现象与本质、内容与形式
+└── 四个方法：归纳演绎、分析综合、抽象具体、逻辑历史</pre>
+
+    <h3>⭐ 对立统一规律（矛盾规律）</h3>
+
+    <h4>1. 矛盾的两个基本属性</h4>
+    <table>
+      <thead><tr><th>属性</th><th>含义</th><th>关系</th></tr></thead>
+      <tbody>
+        <tr><td><strong>同一性</strong></td><td>矛盾双方相互依存、相互贯通，在一定条件下相互转化</td><td>有条件的、相对的</td></tr>
+        <tr><td><strong>斗争性</strong></td><td>矛盾双方相互排斥、相互对立</td><td>无条件的、绝对的</td></tr>
+      </tbody>
+    </table>
+    <div class="key-point">
+      🔑 <strong>核心关系</strong>：同一性寓于斗争性之中，斗争性寓于同一性之中。同一性和斗争性相结合，构成事物的矛盾运动，推动事物发展。
+    </div>
+
+    <h4>2. 矛盾的两个基本方面</h4>
+    <table>
+      <thead><tr><th>方面</th><th>含义</th><th>方法论</th></tr></thead>
+      <tbody>
+        <tr><td><strong>普遍性</strong></td><td>矛盾存在于一切事物中，贯穿于一切事物发展过程的始终</td><td>承认矛盾、分析矛盾、解决矛盾</td></tr>
+        <tr><td><strong>特殊性</strong></td><td>不同事物的矛盾各有特点；同一事物在不同过程和阶段各有特点</td><td>具体问题具体分析——马克思主义活的灵魂</td></tr>
+      </tbody>
+    </table>
+    <div class="key-point">
+      🔑 <strong>辩证关系</strong>：普遍性寓于特殊性之中，并通过特殊性表现出来；特殊性包含着普遍性。<strong>共性与个性、绝对与相对的关系，是事物矛盾问题的精髓。</strong>
+    </div>
+
+    <h4>3. 矛盾发展的不平衡性</h4>
+    <table>
+      <thead><tr><th>概念</th><th>含义</th><th>地位</th></tr></thead>
+      <tbody>
+        <tr><td><strong>主要矛盾</strong></td><td>在诸多矛盾中处于支配地位、起决定作用的矛盾</td><td>决定事物发展方向</td></tr>
+        <tr><td><strong>次要矛盾</strong></td><td>处于从属地位的矛盾</td><td>影响主要矛盾的解决</td></tr>
+        <tr><td><strong>矛盾的主要方面</strong></td><td>矛盾双方中处于支配地位的一方</td><td>决定事物的性质</td></tr>
+        <tr><td><strong>矛盾的次要方面</strong></td><td>矛盾双方中处于被支配地位的一方</td><td>影响事物的性质</td></tr>
+      </tbody>
+    </table>
+    <div class="key-point">
+      🔑 <strong>方法论意义</strong>：坚持<strong>"两点论"与"重点论"的统一</strong>——既要全面看问题（两点论），又要抓住主要矛盾和矛盾的主要方面（重点论）。
+    </div>
+
+    <h4>📝 易混辨析</h4>
+    <table>
+      <thead><tr><th>易混概念</th><th>关键区别</th></tr></thead>
+      <tbody>
+        <tr><td>同一性 vs 斗争性</td><td>同一性是"相互依存/转化"（相对），斗争性是"相互排斥"（绝对）</td></tr>
+        <tr><td>普遍性 vs 特殊性</td><td>普遍性是"共性"（处处有、时时有），特殊性是"个性"（各有不同）</td></tr>
+        <tr><td>主要矛盾 vs 矛盾主要方面</td><td>主要矛盾是"矛盾群中谁主导"，矛盾主要方面是"一对矛盾中谁主导"</td></tr>
+        <tr><td>两点论 vs 重点论</td><td>两点论是"全面看"，重点论是"抓关键"，二者统一</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 3: 真题/模拟题 -->
+  <div class="section">
+    <h2>✏️ 今日真题/模拟题</h2>
+
+    <!-- 单选 -->
+    <div class="quiz-card">
+      <div class="q-type">单选题</div>
+      <div class="question">1.（改编自真题）"安而不忘危，存而不忘亡，治而不忘乱"这句话体现的哲学原理是（ ）</div>
+      <div class="options">
+        <div class="option">A. 矛盾双方在一定条件下相互转化</div>
+        <div class="option">B. 矛盾的特殊性原理</div>
+        <div class="option">C. 主要矛盾决定事物发展方向</div>
+        <div class="option">D. 量变必然引起质变</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">点击查看答案与解析</button>
+      <div class="answer-content">
+        <div class="correct">✅ 答案：A</div>
+        <div class="explanation">
+          <strong>解析：</strong>"安"与"危"、"存"与"亡"、"治"与"乱"是矛盾双方，题干强调在安全时不忘危险、存在时不忘灭亡，体现的是矛盾双方<strong>相互依存、相互贯通</strong>，在一定条件下<strong>相互转化</strong>，属于矛盾的同一性原理。B、C、D虽也是唯物辩证法内容，但与题干含义不符。
+        </div>
+      </div>
+    </div>
+
+    <!-- 多选 -->
+    <div class="quiz-card">
+      <div class="q-type">多选题</div>
+      <div class="question">2.（改编自真题）2026年7月，我国首次用蜂群无人机对台风"红霞"登陆全过程开展多维度观测试验。台风既是自然灾害，也推动了气象观测技术的进步。这体现了（ ）</div>
+      <div class="options">
+        <div class="option">A. 矛盾双方既对立又统一，推动事物发展</div>
+        <div class="option">B. 矛盾的同一性和斗争性不可分割</div>
+        <div class="option">C. 任何事物都有两面性，应坚持一分为二的观点</div>
+        <div class="option">D. 矛盾的斗争性是绝对的，同一性是相对的</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">点击查看答案与解析</button>
+      <div class="answer-content">
+        <div class="correct">✅ 答案：ABC</div>
+        <div class="explanation">
+          <strong>解析：</strong>台风（灾害）与技术进步（成就）构成矛盾双方，既对立又统一，共同推动气象观测的发展，A正确。同一性（台风催生技术进步）与斗争性（台风造成破坏）不可分割，B正确。一分为二看待台风，既是灾难也是科研契机，C正确。D本身正确但与题干无关，题干强调的是同一性和斗争性的统一推动发展，而非单独强调某一属性。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: 背诵口诀 -->
+  <div class="section">
+    <h2>💡 背诵口诀</h2>
+    <div class="mnemonic-box">
+      <p>📌 唯物辩证法"三大规律"速记：</p>
+      <p style="font-size:18px;">对立统一是核心，量变质变讲过程，否定之否定看方向。</p>
+    </div>
+    <div class="mnemonic-box">
+      <p>📌 矛盾属性记忆诀：</p>
+      <p style="font-size:15px;">同一有相对，斗争永绝对；普遍处处有，特殊各不同；主要定方向，方面定性情；两点加重点，辩证看问题。</p>
+    </div>
+  </div>
+
+  <!-- Section 5: 学习建议 -->
+  <div class="section">
+    <h2>📌 今日学习建议</h2>
+    <ul class="plan-list">
+      <li><span class="time-badge">⏱ 15分钟</span> 通读时政热点，重点关注美伊冲突和国内科技突破</li>
+      <li><span class="time-badge">⏱ 25分钟</span> 精读对立统一规律核心考点，画思维导图，做到能用自己的话复述</li>
+      <li><span class="time-badge">⏱ 10分钟</span> 完成今日2道题目，认真看解析</li>
+      <li><span class="time-badge">⏱ 5分钟</span> 默背口诀，睡前再回忆一遍</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="quote">🎯 考研路上，每一天的积累都是未来的底气。坚持就是胜利！</div>
+    <p>本内容由自动化任务「考研政治每日知识点推送」生成 | 下次推送：2026年7月29日 08:00</p>
+  </div>
+
+</div>
+
+<script>
+function toggleAnswer(btn) {
+  const content = btn.nextElementSibling;
+  content.classList.toggle('show');
+  btn.textContent = content.classList.contains('show') ? '收起答案' : '点击查看答案与解析';
+}
+</script>
+</body>
+</html>
