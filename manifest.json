@@ -1,0 +1,21 @@
+{
+  "name": "考研政治每日推送",
+  "short_name": "考研政治",
+  "description": "考研政治每日推送：时政热点 · 核心考点精讲 · 真题带练 · 记忆口诀",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
