@@ -3,397 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>考研政治每日推送 · 2026-08-06</title>
-
-  <!-- PWA: theme-color -->
-  <meta name="theme-color" content="#0f1117" />
-  <meta name="description" content="考研政治每日推送：今日时政热点 · 毛中特核心考点精讲 · 真题带练 · 记忆口诀" />
-
-  <!-- PWA: manifest -->
+  <meta name="theme-color" content="#0f1424" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7fb" />
+  <meta name="description" content="考研政治每日推送 · 2026年8月8日 · 时政热点+毛中特核心考点+真题解析+记忆口诀" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="考研政治每日推" />
   <link rel="manifest" href="manifest.json" />
-
-  <!-- PWA: apple-touch-icon -->
-  <link rel="apple-touch-icon" href="icon-512.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
-
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <title>考研政治每日推送 · 2026年8月8日</title>
   <style>
-    :root {
-      --bg: #0f1117;
-      --bg-soft: #161a26;
-      --card: #1a1f2e;
-      --card-hover: #20263a;
-      --border: #2a3147;
-      --text: #e6e9f0;
-      --text-dim: #9aa3b8;
-      --accent: #ff5a5f;
-      --accent2: #5b8cff;
-      --green: #46d39a;
-      --yellow: #ffcf5c;
-      --purple: #b88bff;
-      --shadow: 0 8px 30px rgba(0,0,0,.35);
+    :root{
+      --bg:#0f1424; --bg2:#161d33; --card:#1b2540; --card2:#212d4f;
+      --line:#2c3a63; --txt:#e8edf7; --sub:#9fb0d0; --muted:#7388b3;
+      --accent:#ff5c7c; --accent2:#4ea1ff; --ok:#39d98a; --warn:#ffb454;
+      --pur:#a779ff; --radius:16px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: radial-gradient(1200px 600px at 80% -10%, #1d2540 0%, var(--bg) 55%) fixed;
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-      padding: 0 16px 64px;
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 600px at 80% -10%, #1d2a52 0%, var(--bg) 55%) fixed;
+      color:var(--txt); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      line-height:1.75; font-size:16px; padding:0 0 60px;
     }
-    .wrap { max-width: 860px; margin: 0 auto; }
+    .wrap{max-width:860px; margin:0 auto; padding:0 16px}
+    header.hero{
+      padding:34px 16px 26px; text-align:center;
+      background:linear-gradient(160deg,#23315c,#141b30);
+      border-bottom:1px solid var(--line);
+    }
+    .hero .tag{display:inline-block; font-size:12px; letter-spacing:2px; color:var(--accent2);
+      border:1px solid var(--line); padding:4px 12px; border-radius:999px; background:rgba(78,161,255,.08)}
+    .hero h1{margin:14px 0 6px; font-size:30px; letter-spacing:1px}
+    .hero .date{color:var(--sub); font-size:15px}
+    .hero .rot{margin-top:14px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap}
+    .hero .rot span{font-size:12px; padding:5px 11px; border-radius:999px; background:var(--card); border:1px solid var(--line); color:var(--muted)}
+    .hero .rot span.on{background:linear-gradient(135deg,var(--accent),#ff8a5c); color:#fff; border-color:transparent; font-weight:600}
 
-    /* Header */
-    header {
-      text-align: center;
-      padding: 36px 0 24px;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 13px;
-      letter-spacing: 2px;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      padding: 4px 14px;
-      margin-bottom: 14px;
-    }
-    h1 { font-size: 30px; font-weight: 800; letter-spacing: 1px; }
-    .date { color: var(--text-dim); margin-top: 8px; font-size: 14px; }
-    .today-section {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 14px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      color: #fff;
-      padding: 6px 16px;
-      border-radius: 8px;
-      font-weight: 600;
-    }
+    section{margin-top:26px; background:var(--card); border:1px solid var(--line);
+      border-radius:var(--radius); overflow:hidden}
+    .sec-h{display:flex; align-items:center; gap:12px; padding:16px 18px;
+      background:linear-gradient(90deg,var(--card2),transparent); border-bottom:1px solid var(--line)}
+    .sec-h .num{width:34px; height:34px; flex:0 0 34px; border-radius:10px; display:grid; place-items:center;
+      font-weight:800; color:#fff; background:linear-gradient(135deg,var(--accent),#ff8a5c)}
+    .sec-h h2{margin:0; font-size:19px}
+    .sec-h .badge{margin-left:auto; font-size:12px; color:var(--accent2); border:1px solid var(--line);
+      padding:3px 10px; border-radius:999px}
+    .body{padding:16px 18px}
 
-    /* Section card */
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px 22px 18px;
-      margin-top: 22px;
-      box-shadow: var(--shadow);
-    }
-    .sec-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .sec-num {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-      width: 30px; height: 30px;
-      border-radius: 9px;
-      display: grid; place-items: center;
-      font-size: 15px;
-      flex: none;
-    }
-    .tag {
-      font-size: 12px;
-      color: var(--text-dim);
-      border: 1px solid var(--border);
-      padding: 2px 10px;
-      border-radius: 6px;
-      margin-left: auto;
-    }
+    table{width:100%; border-collapse:collapse; font-size:14.5px; margin-top:4px}
+    th,td{border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top}
+    th{background:var(--bg2); color:var(--sub); font-weight:600}
+    td .ev{color:var(--txt); font-weight:600}
+    td .kp{color:var(--ok); font-size:13.5px}
+    tr:nth-child(even) td{background:rgba(255,255,255,.015)}
 
-    /* News list */
-    .news {
-      display: grid;
-      gap: 12px;
-    }
-    .news-item {
-      background: var(--bg-soft);
-      border-left: 3px solid var(--accent2);
-      border-radius: 10px;
-      padding: 12px 14px;
-    }
-    .news-item h3 { font-size: 15.5px; margin-bottom: 4px; }
-    .news-item .meta { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; }
-    .news-item .point {
-      font-size: 13.5px;
-      color: var(--green);
-    }
-    .news-item .point b { color: var(--yellow); }
+    .kp-box{background:var(--bg2); border:1px solid var(--line); border-left:4px solid var(--accent2);
+      border-radius:12px; padding:14px 16px; margin:12px 0}
+    .kp-box h3{margin:0 0 8px; font-size:16px; color:#fff}
+    .kp-box ul{margin:6px 0 0; padding-left:20px}
+    .kp-box li{margin:5px 0}
+    .pill{display:inline-block; font-size:12px; padding:2px 9px; border-radius:999px; margin-right:6px;
+      background:rgba(78,161,255,.12); color:var(--accent2); border:1px solid var(--line)}
+    .warn{border-left-color:var(--warn)} .warn h3{color:var(--warn)}
 
-    /* Tables */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 14px;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-    th, td {
-      border: 1px solid var(--border);
-      padding: 10px 12px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th { background: var(--bg-soft); color: var(--text); font-weight: 700; }
-    td { background: var(--card); }
-    tr:hover td { background: var(--card-hover); }
-    .kw { color: var(--yellow); font-weight: 600; }
+    details.q{background:var(--bg2); border:1px solid var(--line); border-radius:12px; margin:12px 0; overflow:hidden}
+    details.q summary{cursor:pointer; padding:14px 16px; font-weight:600; list-style:none; display:flex; gap:10px; align-items:center}
+    details.q summary::-webkit-details-marker{display:none}
+    details.q summary .type{font-size:12px; padding:2px 9px; border-radius:6px; background:var(--pur); color:#fff}
+    details.q summary .arr{margin-left:auto; color:var(--muted); transition:transform .2s}
+    details.q[open] summary .arr{transform:rotate(90deg)}
+    .qbody{padding:4px 16px 16px; border-top:1px solid var(--line)}
+    .opts{margin:10px 0}
+    .opts div{padding:7px 11px; border:1px solid var(--line); border-radius:8px; margin:6px 0; background:var(--card)}
+    .ans{color:var(--ok); font-weight:700; margin-top:8px}
+    .ana{color:var(--sub); font-size:14.5px; margin-top:8px; border-top:1px dashed var(--line); padding-top:10px}
 
-    /* Expandable answers */
-    details {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0;
-      margin-top: 12px;
-      overflow: hidden;
-    }
-    details[open] { border-color: var(--accent2); }
-    summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 13px 16px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      user-select: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::before {
-      content: "▸";
-      color: var(--accent2);
-      transition: transform .2s;
-      font-size: 14px;
-    }
-    details[open] summary::before { transform: rotate(90deg); }
-    .q-type {
-      font-size: 11px;
-      background: var(--accent);
-      color: #fff;
-      padding: 2px 8px;
-      border-radius: 5px;
-      flex: none;
-    }
-    .q-type.multi { background: var(--purple); }
-    .q-type.single { background: var(--accent2); }
-    .ans {
-      padding: 4px 16px 16px;
-      border-top: 1px dashed var(--border);
-      font-size: 14px;
-    }
-    .ans .correct { color: var(--green); font-weight: 700; }
-    .ans .label { color: var(--text-dim); font-size: 12px; display: inline-block; min-width: 56px; }
-    .ans p { margin: 8px 0; }
+    .rhyme{background:linear-gradient(135deg,#23315c,#1b2540); border:1px solid var(--line);
+      border-radius:12px; padding:14px 16px; margin:12px 0}
+    .rhyme .r{font-size:17px; font-weight:700; color:var(--accent); letter-spacing:1px; margin:8px 0}
+    .rhyme .d{color:var(--sub); font-size:14px}
+    .check{display:flex; gap:10px; align-items:center; margin-top:14px; padding:12px 14px;
+      border:1px dashed var(--line); border-radius:12px; background:rgba(57,217,138,.06)}
+    .check input{width:20px; height:20px; accent-color:var(--ok)}
 
-    /* Mnemonic */
-    .mnemonic {
-      background: linear-gradient(135deg, rgba(255,90,95,.12), rgba(91,140,255,.12));
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-    }
-    .mnemonic .jingle {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--yellow);
-      text-align: center;
-      letter-spacing: 2px;
-      margin: 8px 0 14px;
-    }
-    .mnemonic ol { padding-left: 22px; }
-    .mnemonic li { margin: 6px 0; }
-    .mnemonic .tip { color: var(--text-dim); font-size: 13px; margin-top: 10px; }
-
-    footer {
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 12px;
-      margin-top: 32px;
-      line-height: 1.9;
-    }
-    footer a { color: var(--accent2); text-decoration: none; }
-
-    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .pill {
-      font-size: 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 4px 12px;
-      color: var(--text-dim);
-    }
-    .pill.on { background: var(--accent); color:#fff; border-color: var(--accent); }
+    footer{text-align:center; color:var(--muted); font-size:13px; margin-top:30px; padding:0 16px}
+    footer a{color:var(--accent2); text-decoration:none}
+    .online-dot{display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--ok);
+      margin-right:6px; box-shadow:0 0 8px var(--ok)}
   </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="badge">考研政治 · 每日推送</div>
-    <h1>今日考点精练</h1>
-    <div class="date">2026 年 8 月 6 日 · 星期四</div>
-    <div class="today-section">📘 今日重点板块：毛中特（新发展理念与高质量发展）</div>
+  <header class="hero">
+    <span class="tag">📚 考研政治 · 每日推送</span>
+    <h1>今日必背 · 政治提分</h1>
+    <div class="date">📅 2026年8月8日（星期六）</div>
+    <div class="rot">
+      <span>马原</span>
+      <span class="on">毛中特 ★今日</span>
+      <span>史纲</span>
+      <span>思修</span>
+      <span>时政</span>
+    </div>
   </header>
 
-  <!-- 板块轮换指示 -->
-  <div class="pill-row" style="justify-content:center;">
-    <span class="pill">马原</span>
-    <span class="pill on">毛中特</span>
-    <span class="pill">史纲</span>
-    <span class="pill">思修</span>
-    <span class="pill">时政</span>
+  <div class="wrap">
+
+    <!-- ① 今日时政热点 -->
+    <section>
+      <div class="sec-h">
+        <div class="num">①</div>
+        <h2>今日时政热点 · 考点关联</h2>
+        <span class="badge">国内外重大事件</span>
+      </div>
+      <div class="body">
+        <table>
+          <thead>
+            <tr><th style="width:46%">🇨🇳 事件速览</th><th>🎯 关联考研考点</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ev">7月30日 中共中央政治局会议</span><br>决定今年10月在北京召开<b>二十届五中全会</b>，分析研究当前经济形势和经济工作。</td>
+              <td><span class="kp">毛中特：党的领导与经济工作；时政：二十届五中全会</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">党外人士座谈会（7月24日）</span><br>习近平主持并发表重要讲话，强调坚持<b>稳中求进</b>工作总基调，完整准确全面贯彻<b>新发展理念</b>，加快构建<b>新发展格局</b>。</td>
+              <td><span class="kp">毛中特：新发展理念、新发展格局、高质量发展</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">央行8月1日 下半年工作会议</span><br>继续实施好<b>适度宽松的货币政策</b>，保持流动性充裕，引导社融、货币供应量增长同经济增长和价格总水平预期目标相匹配。</td>
+              <td><span class="kp">马原/政经：宏观调控；货币政策与 market 配置；总量与结构</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">国务院印发《知识产权保护和运用"十五五"规划》</span><br>部署知识产权保护全链条、促进转化运用。</td>
+              <td><span class="kp">毛中特：创新驱动发展战略；知识产权强国；新质生产力</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">商务部8月5日对美反制</span><br>将6家美国实体列入反制清单，加强无人机相关两用物项对美出口管制；外交部回应日本新版《防卫白皮书》炒作"中国威胁"。</td>
+              <td><span class="kp">毛中特/时政：国家安全；独立自主的和平外交政策；底线思维</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">2026世界人工智能大会（上海）</span><br>聚焦AI治理与全球合作，世界人工智能合作组织推进务实工作。</td>
+              <td><span class="kp">毛中特：科技自立自强；新质生产力；人类命运共同体（全球治理）</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">《求是》发表习近平《加快建设健康中国》</span><br>把保障人民健康放在优先发展的战略位置。</td>
+              <td><span class="kp">毛中特：以人民为中心；共同富裕；共享发展理念</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="margin-top:18px">
+          <thead>
+            <tr><th style="width:46%">🌍 国际视野</th><th>🎯 关联考研考点</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ev">美国就业数据与美联储降息预期</span><br>市场紧盯非农与通胀，美元、黄金、美股波动牵动全球。</td>
+              <td><span class="kp">马原/政经：经济全球化；资本主义国家经济矛盾；金融资本</span></td>
+            </tr>
+            <tr>
+              <td><span class="ev">俄乌局势胶着、中东多方博弈</span><br>和平谈判受阻，地区安全形势复杂。</td>
+              <td><span class="kp">时政：和平与发展的时代主题；世界百年未有之大变局</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ② 核心考点精讲 -->
+    <section>
+      <div class="sec-h">
+        <div class="num">②</div>
+        <h2>核心考点精讲 · 毛中特</h2>
+        <span class="badge">高质量发展是首要任务</span>
+      </div>
+      <div class="body">
+        <div class="kp-box">
+          <h3>📌 一、新时代我国经济发展的基本特征：由高速增长阶段转向高质量发展阶段</h3>
+          <ul>
+            <li><b>高质量发展</b>：是能够很好满足人民日益增长的美好生活需要的发展，是体现<b>新发展理念</b>的发展。</li>
+            <li>从"有没有"转向"好不好"，是经济社会发展各层面的<b>质的跃升</b>。</li>
+            <li>党的<b>二十大报告</b>明确：<b>高质量发展是全面建设社会主义现代化国家的首要任务</b>。</li>
+          </ul>
+        </div>
+
+        <div class="kp-box">
+          <h3>📌 二、新发展理念（"指挥棒、红绿灯"）</h3>
+          <ul>
+            <li><span class="pill">创新</span>引领发展的<b>第一动力</b>（解决发展动力问题）</li>
+            <li><span class="pill">协调</span>持续健康发展的<b>内在要求</b>（解决发展不平衡问题）</li>
+            <li><span class="pill">绿色</span>永续发展的<b>必要条件</b>（解决人与自然和谐问题）</li>
+            <li><span class="pill">开放</span>国家繁荣发展的<b>必由之路</b>（解决发展内外联动问题）</li>
+            <li><span class="pill">共享</span>中国特色社会主义的<b>本质要求</b>（解决社会公平正义问题）</li>
+          </ul>
+        </div>
+
+        <div class="kp-box">
+          <h3>📌 三、构建新发展格局</h3>
+          <ul>
+            <li>以<b>国内大循环</b>为主体、<b>国内国际双循环</b>相互促进。</li>
+            <li>最本质特征是实现<b>高水平的自立自强</b>（科技自立自强是战略支撑）。</li>
+            <li>≠ 闭关锁国：是国内国际双循环，是<b>更高水平</b>的开放。</li>
+          </ul>
+        </div>
+
+        <div class="kp-box warn">
+          <h3>⚠️ 四、高频易混点（必考陷阱）</h3>
+          <ul>
+            <li>"第一动力"是<b>创新</b>，不是协调；"本质要求"是<b>共享</b>。</li>
+            <li>"首要任务"是<b>高质量发展</b>；"第一要务"是<b>发展</b>（发展是党执政兴国的第一要务）。</li>
+            <li>"战略支撑"是<b>科技自立自强</b>；"本质要求"是<b>共享</b>，别张冠李戴。</li>
+            <li>"三新"逻辑：立足<b>新发展阶段</b> → 贯彻<b>新发展理念</b> → 构建<b>新发展格局</b>。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 真题/模拟题 -->
+    <section>
+      <div class="sec-h">
+        <div class="num">③</div>
+        <h2>真题 / 模拟题 · 带解析</h2>
+        <span class="badge">点击展开答案</span>
+      </div>
+      <div class="body">
+
+        <details class="q">
+          <summary><span class="type">单选</span>党的二十大报告指出，高质量发展是全面建设社会主义现代化国家的（&nbsp;&nbsp;）<span class="arr">▶</span></summary>
+          <div class="qbody">
+            <div class="opts">
+              <div>A. 第一要务</div>
+              <div>B. 根本任务</div>
+              <div>C. 首要任务</div>
+              <div>D. 战略支撑</div>
+            </div>
+            <div class="ans">✅ 正确答案：C</div>
+            <div class="ana">📖 解析：党的二十大报告原文明确"<b>高质量发展是全面建设社会主义现代化国家的首要任务</b>"。A"发展是党执政兴国的第一要务"；D"科技自立自强是国家发展的战略支撑"。注意"首要任务"与"第一要务"表述不同，易混。</div>
+          </div>
+        </details>
+
+        <details class="q">
+          <summary><span class="type">多选</span>习近平总书记指出，新发展理念回答了关于发展的目的、动力、方式、路径等重大问题。下列属于新发展理念内容的有（&nbsp;&nbsp;）<span class="arr">▶</span></summary>
+          <div class="qbody">
+            <div class="opts">
+              <div>A. 创新</div>
+              <div>B. 协调</div>
+              <div>C. 绿色</div>
+              <div>D. 开放、共享</div>
+            </div>
+            <div class="ans">✅ 正确答案：ABCD</div>
+            <div class="ana">📖 解析：新发展理念就是<b>创新、协调、绿色、开放、共享</b>的发展理念。习近平指出，新发展理念"回答了关于发展的目的、动力、方式、路径等一系列理论和实践问题"。记忆口诀"创协绿开共"（创新协调绿色开放共享）。</div>
+          </div>
+        </details>
+
+        <details class="q">
+          <summary><span class="type">分析</span>为什么说构建新发展格局最本质的特征是实现高水平的自立自强？（简答要点）<span class="arr">▶</span></summary>
+          <div class="qbody">
+            <div class="ana">📖 答题要点：
+            <br>① 新发展格局以国内大循环为主体，必须把发展的<b>基点放在自己力量</b>上；
+            <br>② <b>科技自立自强</b>是国家发展的战略支撑，关键核心技术必须自主可控；
+            <br>③ 国际经济格局深刻调整，必须统筹发展与安全，防范化解"卡脖子"风险；
+            <br>④ 自立自强不是封闭，而是以<b>更强竞争力</b>参与国际循环，实现更高水平开放。</div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ④ 记忆口诀 -->
+    <section>
+      <div class="sec-h">
+        <div class="num">④</div>
+        <h2>记忆口诀 · 背诵技巧</h2>
+        <span class="badge">今日打卡</span>
+      </div>
+      <div class="body">
+        <div class="rhyme">
+          <div class="r">口诀一：创协绿开共（谐音"闯鞋绿开共"）</div>
+          <div class="d">创新、协调、绿色、开放、共享 —— 新发展理念五词一句话记牢。</div>
+        </div>
+        <div class="rhyme">
+          <div class="r">口诀二：三新顺口溜</div>
+          <div class="d">立足<b>新阶段</b>，贯彻<b>新理念</b>，构建<b>新格局</b>；首任务是<b>高质量</b>，第一动力是<b>创新</b>。</div>
+        </div>
+        <div class="rhyme">
+          <div class="r">口诀三：易混词对对碰</div>
+          <div class="d">首要任务=高质量；第一要务=发展；战略支撑=科技自立自强；本质要求=共享。</div>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="ck" />
+          <label for="ck"><b>✅ 今日背诵打卡：</b>我已默写出"新发展理念五词"与"三新"逻辑，并能区分四组易混表述。</label>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><span class="online-dot"></span>内容每日更新 · 可"添加到主屏幕"离线阅读（PWA）</p>
+      <p>板块轮换：马原 → <b>毛中特</b> → 史纲 → 思修 → 时政，明日重点：<b>史纲</b></p>
+      <p>📲 在线版：<a href="https://2285167489-hub.github.io/kaoyan-politics/">kaoyan-politics</a></p>
+    </footer>
   </div>
 
-  <!-- ① 今日时政热点 -->
-  <section>
-    <div class="sec-title"><span class="sec-num">1</span>今日时政热点 · 考点关联<span class="tag">考点透视</span></div>
-    <div class="news">
-      <div class="news-item">
-        <h3>政治局就"高质量推进国防和军队现代化"举行集体学习</h3>
-        <div class="meta">来源：新华社 / 央视新闻 · 2026-07-31</div>
-        <div class="point">📌 考点关联：<b>新时代强军思想</b>、国防和军队现代化"三步走"战略、党对军队的绝对领导。习近平强调"强化政治引领、深化创新发展"。</div>
-      </div>
-      <div class="news-item">
-        <h3>多地布局"算电协同"，培育新质生产力</h3>
-        <div class="meta">来源：四川/山西/吉林发改委 · 2026-07</div>
-        <div class="point">📌 考点关联：<b>新质生产力</b>、<b>绿色发展</b>、科技自立自强、高质量发展。算力与新型能源体系融合，是"创新+绿色"的生动实践。</div>
-      </div>
-      <div class="news-item">
-        <h3>第十二批国家药品集采开标，规模史上最大</h3>
-        <div class="meta">来源：国家医保局 · 2026-08-01</div>
-        <div class="point">📌 考点关联：<b>以人民为中心</b>的发展思想、保障和改善民生（"看病难、看病贵"）、共同富裕的民生底色。</div>
-      </div>
-      <div class="news-item">
-        <h3>《求是》发表习近平《加快建设健康中国》</h3>
-        <div class="meta">来源：第15期《求是》· 2026-08-01</div>
-        <div class="point">📌 考点关联：<b>健康中国战略</b>、以人民为中心、在发展中保障和改善民生。</div>
-      </div>
-      <div class="news-item">
-        <h3>国际：中东局势持续紧张，欧盟内部因移民问题现分歧</h3>
-        <div class="meta">来源：央视新闻 / 参考消息 · 2026-08</div>
-        <div class="point">📌 考点关联：<b>百年未有之大变局</b>、构建人类命运共同体、全球治理体系变革、中国外交"三大全球倡议"。</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ② 核心考点精讲 -->
-  <section>
-    <div class="sec-title"><span class="sec-num">2</span>核心考点精讲 · 毛中特<span class="tag">新发展理念与高质量发展</span></div>
-    <p>党的二十大明确：<b>高质量发展是全面建设社会主义现代化国家的首要任务</b>。贯彻<b>新发展理念</b>（创新、协调、绿色、开放、共享）是新时代我国发展壮大的必由之路。下表速记五大发展理念的定位与关键词：</p>
-    <table>
-      <thead>
-        <tr><th>理念</th><th>在五大理念中的定位</th><th>核心关键词 / 必背点</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="kw">创新</td><td>引领发展的<b>第一动力</b></td><td>解决发展动力问题；科技自立自强是战略支撑；新质生产力</td></tr>
-        <tr><td class="kw">协调</td><td>持续健康发展的<b>内在要求</b></td><td>解决发展不平衡问题；城乡、区域、经济社会协调</td></tr>
-        <tr><td class="kw">绿色</td><td>永续发展的<b>必要条件</b></td><td>解决人与自然和谐问题；"双碳"目标、绿水青山就是金山银山</td></tr>
-        <tr><td class="kw">开放</td><td>国家繁荣发展的<b>必由之路</b></td><td>解决发展内外联动问题；高水平对外开放、人类命运共同体</td></tr>
-        <tr><td class="kw">共享</td><td>中国特色社会主义的<b>本质要求</b></td><td>解决社会公平正义问题；共同富裕、以人民为中心</td></tr>
-      </tbody>
-    </table>
-
-    <p style="margin-top:14px;"><b>延伸必背：</b></p>
-    <table>
-      <thead>
-        <tr><th>概念</th><th>命题角度（选择题/分析题高频）</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="kw">新质生产力</td><td>以高技术、高效能、高质量为特征；由技术革命性突破、生产要素创新性配置、产业深度转型升级催生；特点是创新，关键在质优，本质是先进生产力</td></tr>
-        <tr><td class="kw">供给侧结构性改革</td><td>主线地位；重在"巩固、增强、提升、畅通"；根本靠改革，主线是供给侧结构性改革</td></tr>
-        <tr><td class="kw">现代化产业体系</td><td>坚持把发展经济的着力点放在实体经济上；推进新型工业化</td></tr>
-        <tr><td class="kw">新发展格局</td><td>以国内大循环为主体、国内国际双循环相互促进；构建新发展格局最本质的特征是实现高水平的自立自强</td></tr>
-      </tbody>
-    </table>
-    <div class="pill-row">
-      <span class="pill">首要任务 = 高质量发展</span>
-      <span class="pill">第一动力 = 创新</span>
-      <span class="pill">本质要求 = 共享</span>
-      <span class="pill">必由之路 = 开放 / 新发展理念</span>
-    </div>
-  </section>
-
-  <!-- ③ 真题 / 模拟题 -->
-  <section>
-    <div class="sec-title"><span class="sec-num">3</span>真题 · 模拟题带练<span class="tag">点击展开解析</span></div>
-
-    <details>
-      <summary><span class="q-type multi">多选</span>关于"新发展理念"，下列说法正确的有（ ）</summary>
-      <div class="ans">
-        <p>A. 创新是引领发展的第一动力</p>
-        <p>B. 协调是持续健康发展的内在要求</p>
-        <p>C. 绿色是永续发展的必要条件</p>
-        <p>D. 共享是中国特色社会主义的本质要求</p>
-        <p class="correct">✅ 正确答案：A B C D</p>
-        <p><span class="label">解析：</span>五大发展理念各自定位是固定考点——创新（第一动力）、协调（内在要求）、绿色（必要条件）、开放（必由之路）、共享（本质要求）。本题四项表述均完全正确，全选。注意区分"开放"是"必由之路"，"共享"才是"本质要求"，二者易混，需精准对应。</p>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="q-type single">单选</span>党的二十大报告指出，全面建设社会主义现代化国家的首要任务是（ ）</summary>
-      <div class="ans">
-        <p>A. 科技创新</p>
-        <p>B. 高质量发展</p>
-        <p>C. 共同富裕</p>
-        <p>D. 全面从严治党</p>
-        <p class="correct">✅ 正确答案：B</p>
-        <p><span class="label">解析：</span>党的二十大明确提出"高质量发展是全面建设社会主义现代化国家的首要任务"。A 科技创新是"第一动力"的抓手；C 共同富裕是中国特色社会主义的本质要求、中国式现代化的重要特征；D 是"四个全面"战略布局的重要内容。本题直接考查"首要任务"的规范表述，必须记死：<b>首要任务 = 高质量发展</b>。</p>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="q-type single">单选</span>构建新发展格局最本质的特征是（ ）</summary>
-      <div class="ans">
-        <p>A. 扩大内需</p>
-        <p>B. 实现高水平的自立自强</p>
-        <p>C. 高水平对外开放</p>
-        <p>D. 建设现代化产业体系</p>
-        <p class="correct">✅ 正确答案：B</p>
-        <p><span class="label">解析：</span>构建以国内大循环为主体、国内国际双循环相互促进的新发展格局，其<b>最本质的特征是实现高水平的自立自强</b>。内需是战略基点，开放是必由之路，实体经济是着力点，但"最本质特征"专属"高水平的自立自强"，属高频易错点。</p>
-      </div>
-    </details>
-  </section>
-
-  <!-- ④ 记忆口诀 -->
-  <section>
-    <div class="sec-title"><span class="sec-num">4</span>记忆口诀 · 背诵技巧<span class="tag">每日一记</span></div>
-    <div class="mnemonic">
-      <div class="jingle">「创协绿开共，动要件路质」</div>
-      <ol>
-        <li><b>创</b>新 —— 第一<b>动</b>力</li>
-        <li><b>协</b>调 —— 内在<b>要</b>求</li>
-        <li><b>绿</b>色 —— 必要条<b>件</b></li>
-        <li><b>开</b>放 —— 必由之<b>路</b></li>
-        <li><b>共</b>享 —— 本质要<b>质</b>（本质要求）</li>
-      </ol>
-      <p class="tip">🧠 技巧：取每个理念首字连成"创协绿开共"，再取定位尾字"动、要、件、路、质"——谐音记忆"动要件路质=都要建路子(质)"。另记两条铁律：<b>首要任务=高质量发展</b>、<b>最本质特征=高水平自立自强</b>，选择题几乎必考。</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>📚 考研政治每日推送 · 板块每日轮换：马原 → 毛中特 → 史纲 → 思修 → 时政</p>
-    <p>本站已启用 PWA，可"添加到主屏幕"离线查看 · 数据来源：新华社、央视新闻、求是、国家医保局等公开报道</p>
-    <p>🌐 访问地址：<a href="https://2285167489-hub.github.io/kaoyan-politics/">2285167489-hub.github.io/kaoyan-politics</a></p>
-  </footer>
-</div>
-
-<!-- PWA: 注册 Service Worker -->
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').then(function (reg) {
-        console.log('SW registered:', reg.scope);
-      }).catch(function (err) {
-        console.log('SW registration failed:', err);
+  <script>
+    // PWA: 注册 Service Worker（离线缓存，断网也能看）
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (e) {
+          console.log('SW 注册失败:', e);
+        });
       });
-    });
-  }
-</script>
+    }
+  </script>
 </body>
 </html>
